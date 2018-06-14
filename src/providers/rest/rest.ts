@@ -200,4 +200,19 @@ export class RestProvider {
     });
   }
 
+  saveprofileservice(titleid,stateid,districtid,editprofiledata){
+        return new Promise((resolve, reject) => {
+      this.http.post(this.apiUrl+'/RedeemCustomerPut',
+      {"TitleId":titleid,"StateId":stateid,"DistrictId":districtid,"FirstName":editprofiledata.firstname,"MiddleName":editprofiledata.middlename,"LastName":editprofiledata.lastname,
+      "Address1":editprofiledata.address1,"Address2":editprofiledata.address2,"Address3":editprofiledata.address3,"City":editprofiledata.city,"PinCode":editprofiledata.pincode,
+      "EmailId":editprofiledata.email,"AltMobileNumber":editprofiledata.altermbl,"MobileNumber":editprofiledata.mobileno}) .map(res => res)
+        .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          reject(err);
+        });
+    });
+
+  }
+
 }

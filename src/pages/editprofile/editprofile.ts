@@ -19,6 +19,7 @@ export class EditprofilePage {
   statename:any;
   districtarray:any;
   districtsarra123=[];
+  editprofiledata={"firstname":'',"middlename":'',"lastname":'',"address1":'',"address2":'',"address3":'',"city":'',"pincode":'',"email":'',"altermbl":'',"mobileno":''}
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public restprovider:RestProvider,public storage:Storage) {
  this.Editprofile();
@@ -60,7 +61,17 @@ export class EditprofilePage {
        }  
        
     });
-       console.log(this.districtsarra123)
+       //console.log(this.districtsarra123)
+  }
+
+  saveprofile(titleid,stateid,districtid){
+
+    this.restprovider.saveprofileservice(titleid,stateid,districtid,this.editprofiledata).then(data=>{
+     console.log(data)
+     if(data=='1'){
+       this.navCtrl.push('ClaimPage')
+     }
+    })
   }
 
 }

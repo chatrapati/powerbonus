@@ -19,12 +19,39 @@
             <ion-item>
               <ion-label>Title</ion-label>
               <ion-select name="titleid" [(ngModel)]="titleid">
-                <ion-option *ngFor="let title of titlename" value="{{title.TitleId}}">{{title.TitleName}}</ion-option>
+                <ion-option *ngFor="let title of titlename"  value="{{title.TitleId}}">{{title.TitleName}}</ion-option>
               
               </ion-select>
             </ion-item>
 
-            <ion-item>
+           
+
+              <ion-item>
+                <ion-label floating>Firstname</ion-label>
+                <ion-input type="text" name="firstname" id="firstname" [(ngModel)]="editprofiledata.firstname" value=""></ion-input>
+              </ion-item>
+                 <ion-item>
+                <ion-label floating>Middlename</ion-label>
+                <ion-input type="text" name="middlename" id="middlename" [(ngModel)]="editprofiledata.middlename" value=""></ion-input>
+              </ion-item>
+                 <ion-item>
+                <ion-label floating>Lastname</ion-label>
+                <ion-input type="text" name="lastname" id="lastname" [(ngModel)]="editprofiledata.lastname" value=""></ion-input>
+              </ion-item>
+        
+              <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input type="email" name="email" id="email" [(ngModel)]="editprofiledata.email" value=""></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label floating>Phone Number</ion-label>
+                  <ion-input type="phonenumber" name="mobileno" id="mobileno" [(ngModel)]="editprofiledata.mobileno" value=""></ion-input>
+                </ion-item>
+                 <ion-item>
+                  <ion-label floating>Alternate Phone Number</ion-label>
+                  <ion-input type="phonenumber" name="altermbl" id="altermbl" [(ngModel)]="editprofiledata.altermbl" value=""></ion-input>
+                </ion-item>
+                 <ion-item>
               <ion-label>State</ion-label>
               <ion-select name="stateid" [(ngModel)]="stateid" (ngModelChange)="statechange(stateid)">
                 <ion-option *ngFor="let state of statename"  value="{{state.StateId}}">{{state.StateName}}</ion-option>
@@ -39,25 +66,31 @@
               
               </ion-select>
             </ion-item>
-
-              <ion-item>
-                <ion-label floating>Username</ion-label>
-                <ion-input type="text" value=""></ion-input>
+                 <ion-item>
+                <ion-label floating>City</ion-label>
+                <ion-input type="text" name="city" id="city" [(ngModel)]="editprofiledata.city" value=""></ion-input>
               </ion-item>
-        
-              <ion-item>
-                <ion-label floating>Email</ion-label>
-                <ion-input type="email" value=""></ion-input>
+                 <ion-item>
+                <ion-label floating>Address1</ion-label>
+                <ion-input type="text" name="address1" id="address1" [(ngModel)]="editprofiledata.address1" value=""></ion-input>
               </ion-item>
               <ion-item>
-                  <ion-label floating>Phone Number</ion-label>
-                  <ion-input type="phonenumber" value=""></ion-input>
-                </ion-item>
+                <ion-label floating>Address2</ion-label>
+                <ion-input type="text" name="address2" id="address2" [(ngModel)]="editprofiledata.address2" value=""></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Address3</ion-label>
+                <ion-input type="text" name="address3" id="address3" [(ngModel)]="editprofiledata.address3" value=""></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Pincode</ion-label>
+                <ion-input type="text" name="pincode" id="pincode" [(ngModel)]="editprofiledata.pincode" value=""></ion-input>
+              </ion-item>
         
             </ion-list>
         
             <div padding>
-              <button ion-button [ngStyle]="{'background': 'gray'}" block>Save</button>
+              <button ion-button [ngStyle]="{'background': 'gray'}" (click)="saveprofile(titleid,stateid,districtid)" block>Save</button>
             </div>
 
 </ion-content>
