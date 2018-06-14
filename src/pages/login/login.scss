@@ -1,0 +1,93 @@
+page-login {
+    .bg-image {
+        background: url("../assets/imgs/bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+.mobile-code{
+    margin-bottom: -36px;
+}
+
+.mobile-input{
+    margin-left: 80px;
+}
+.eyeIcon{
+    margin-top: -40px;
+    float: right;
+}
+.iconitem > .label-md[stacked]{
+    margin-left: 19px;
+}
+
+.iconitem  #partitioned{
+    margin-left: 10px;
+}
+
+
+
+   
+    .trbl-pad {
+        padding: 0 7%;
+    }
+    .powerlogo img {
+        width: 50%;
+        margin-top: 10%;
+    }
+    .login-title {
+        color: #000000 !important;
+    }
+    .login-subtitle {
+        font-size: 15px;
+        font-weight: bold;
+        color: #403f3f;
+    }
+
+    .iconitem .item {
+        background-color: transparent !important;
+        border-width: 0 !important;
+    }
+    .password-icon a i {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    .forgotlink a {
+        color: #fff;
+        font-size: 16px;
+    }
+    .regmaindiv {
+        margin-top: 28px;
+    }
+
+    .pswitem {
+        width: 79%;
+    }
+
+    #divInner {
+        left: 0;
+        position: sticky;
+    }
+    
+    #divOuter {
+        width: 190px;
+        overflow: hidden
+    }
+
+    #partitioned {
+        padding-left: 10px;
+        letter-spacing: 42px;
+        border: 0;
+        background-image: linear-gradient(to left, #000000 70%, rgba(255, 255, 255, 0) 0%);
+        background-position: bottom;
+        background-size: 37px 1px;
+        background-repeat: repeat-x;
+        background-position-x: 35px;
+        width: 220px;
+        min-width: 220px;
+    }
+}

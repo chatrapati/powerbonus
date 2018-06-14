@@ -1,0 +1,67 @@
+
+<ion-header>
+
+ 
+  <ion-navbar>
+    <ion-buttons left>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      </ion-buttons>
+      <ion-buttons center>
+        <button ion-button>
+            <img src="../assets/imgs/pb-logo.png" class="headerlogo">
+        </button>
+       
+      </ion-buttons>
+      <ion-buttons right>
+        <button ion-button>
+            <ion-icon name="search" class="headerSearch"></ion-icon>
+        </button>
+         
+      </ion-buttons>
+</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="scratch-panel">
+        <form class="scratchform">
+           
+                <ion-item>
+                    <ion-label color="primary" stacked>Scratch No:</ion-label>
+                    <ion-input type="text" placeholder="Scratch No" [(ngModel)]="scratchNo" name="scratchNo"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label color="primary" stacked>Barcode</ion-label>
+                      <ion-input type="text" name="barcode" [(ngModel)]="barcode" (ngModelChange)="getSku(barcode)" placeholder="Barcode"></ion-input>
+                    </ion-item>
+               
+              
+                    <ion-item>
+                        <ion-label>Select SKU</ion-label>
+                        <ion-select name="selectedSku" [(ngModel)]="selectedSku" >
+                          <ion-option *ngFor="let sku of skus" [value]="sku.SKU">{{sku.SKU}}</ion-option>
+                          <!-- <ion-option value="m">Male</ion-option> -->
+                        </ion-select>
+                      </ion-item>
+
+                      <ion-item>
+                          <ion-label>Select Brand</ion-label>
+                           <ion-select name="selectedBrand" [(ngModel)]="selectedBrand" (ngModelChange)="getSkuOnSelectedBrand(selectedBrand,selectedSku)">
+                             <ion-option *ngFor="let brand of brandArray" [value]="brand.ClientId">{{brand.OrganizationName}}</ion-option>
+                             <!-- <ion-option value="m">Male</ion-option> -->
+                           </ion-select>
+                         </ion-item>
+<br>
+                <div align="middle">
+                    <button ion-button (click)="verify(scratchNo,selectedBrand)" class="verifyBtn">VERIFY</button>
+                </div>
+           
+         
+        </form>
+    </div>
+
+</ion-content>

@@ -1,0 +1,52 @@
+page-claim {
+.p{
+    font-size: 15px;
+        font-weight: 500;
+}
+.amunt_auto_incre{
+    display:inline-flex;
+    float: right;
+    margin-top: 20px;
+}
+.amunt_auto_incre .button{
+   width:30px;
+    height: 30px;
+    line-height: 1.6;
+    border: 1px solid #0487a1;
+    background: #0487a1;
+    color: #fff;
+    border-radius: 0px;
+    text-align: center;
+}
+.amunt_auto_incre .texting{
+    width: 35px;
+    height: 30px;
+    border:1px solid #0487a1;
+    text-align: center;
+}
+.amunt_auto_incre{
+        margin-top: 0px;
+    margin-right: 60px;
+}
+.btnclaim{
+       margin-top: 0px;
+   // margin-right: 60px;
+}
+.card-title-md{
+    padding: 0px 0 !important;
+}
+.toolbar-background.toolbar-background-md{
+background:orange;
+}
+.imgclaim{
+border: 1px dotted orange;
+border-radius: 10px;
+}
+.spanpoints{
+    color: dimgray;
+    font-size: 14px
+}
+.priceclaim{
+    font-size: 15px;
+}
+}

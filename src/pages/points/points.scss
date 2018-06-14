@@ -1,0 +1,70 @@
+page-points {
+.pointsdiv{
+    background: orange;
+    height: 80px;
+}
+.rewardFab{
+    margin-bottom:300px;
+}
+.favpoints{
+    background: black;
+    width: 120px;
+    height: 120px;
+}
+.favpoints.fab.fab-md{
+    margin-left: 113px;
+}
+.toolbar-background.toolbar-background-md{
+    background: orange;
+}
+.header.header-md{
+z-index: 1;
+}
+.points-circle{
+    border: 1px solid;
+    background: black;
+    border-radius: 50%;
+    width: 147px;
+    height: 147px;
+}
+.pointsdata{
+    color:white;
+    margin-top: 37px;
+}
+.grid{
+    margin-top: 60px;
+}
+ion-card {
+    
+    height: 87px;
+    border: 1px dotted orange;
+}
+ion-card b{
+    font-weight: bold;
+    font-size: 19px;
+
+}
+
+.amunt_auto_incre{
+    display:inline-flex;
+    float: right;
+    margin-top: 20px;
+}
+.amunt_auto_incre .button{
+   width:30px;
+    height: 30px;
+    line-height: 1.6;
+    border: 1px solid #0487a1;
+    background: #0487a1;
+    color: #fff;
+    border-radius: 0px;
+    text-align: center;
+}
+.amunt_auto_incre .texting{
+    width: 35px;
+    height: 30px;
+    border:1px solid #0487a1;
+    text-align: center;
+}
+
+}

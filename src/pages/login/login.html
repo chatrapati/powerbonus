@@ -1,0 +1,77 @@
+
+<ion-header>
+</ion-header>
+
+
+<ion-content class="bg-image" no-bounce>
+  <div class="trbl-pad">
+      <div class="powerlogo text-center">
+          <img src="../assets/imgs/logo.png" alt="logo">
+      </div>
+      <div>
+          <h3 class="login-title text-center">Welcome</h3>
+      </div>
+      <div>
+          <p class="login-subtitle text-center">Login to continue with GST</p>
+      </div>
+      <form  >
+          <div class="item item-icon-left iconitem">
+              <i class="icon ion-ios-telephone"></i>
+              <ion-item>
+                <ion-label color="primary" stacked>Mobile Number</ion-label>
+                <ion-input type="text" name="" value="+91-" class="mobile-code" disabled></ion-input>
+                <ion-input type="number" name="user_mobile" value="" [(ngModel)] = "loginData.user_mobile" placeholder="10 digit mobile number" class="mobile-input">
+                </ion-input>
+              </ion-item>
+              <br>
+              <div align="middle"><button ion-button (click)="getOtp()" *ngIf="!userOtp">Verify</button></div>
+              
+          </div>
+          <div class="item item-icon-left iconitem" *ngIf="userExist == 0">
+              <i class="icon ion-ios-unlocked"></i>
+              <ion-label color="primary" stacked>Enter OTP</ion-label>
+            <div></div>
+              <ion-input id="partitioned" type="password" maxlength="6" name="password" [(ngModel)]="loginData.password"></ion-input>
+            
+              <button  ion-button class="eyeIcon"
+              icon-only 
+              clear 
+              color="dark" 
+              type="button" 
+              item-right  (click)="showPasswordText = !showPasswordText">
+                <ion-icon name="eye"> </ion-icon>
+              </button>
+             
+
+          </div>
+
+          <div class="item item-icon-left iconitem" *ngIf="userExist == 1">
+            <i class="icon ion-ios-unlocked"></i>
+            <ion-label color="primary" stacked>Enter Password</ion-label>
+            <ion-item>
+            <ion-input  type="password" maxlength="6"  name="password" [(ngModel)]="loginData.password"></ion-input>
+        </ion-item>
+            <button  ion-button class="eyeIcon"
+            icon-only 
+            clear 
+            color="dark" 
+            type="button" 
+            item-right  (click)="showPasswordText = !showPasswordText">
+              <ion-icon name="eye"> </ion-icon>
+            </button>
+           
+
+        </div>
+         
+          <div class="forgotlink text-center">
+              <a href="#/forgotpassword">Forgot Password?</a>
+          </div>
+          <div align="middle">
+            <button *ngIf="userOtp" ion-button (click)="userLogin()">Login</button>
+          </div>
+          <!-- <div class="regmaindiv text-center">
+              <span>Don't have GST Account?</span><a href="#/register" class="reglink">REGISTER</a>
+          </div> -->
+      </form>
+  </div>
+</ion-content>

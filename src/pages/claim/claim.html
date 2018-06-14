@@ -1,0 +1,46 @@
+<!--
+  Generated template for the ClaimPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title align=middle>claim</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card *ngFor="let gift of gifts">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 class="imgclaim">
+         <img src="{{gift.GiftPhotograph.replace('..','https://powerbonus.in')}}"/>
+      </ion-col>
+        <ion-col>
+          <div>
+  <ion-card-title>
+     <p>{{gift.MakeModel}}-{{gift.GiftName}}</p>
+      </ion-card-title>
+       <span class="priceclaim">Price:{{gift.MRP}}</span><br>
+       <span class="spanpoints">Points:{{gift.RewardPoints}}</span>
+      
+      <div class="amunt_auto_incre">
+                        <a id="decre" class="button" ng-click="decrement(item)">-</a>
+                        <input type="text" class="texting" >
+
+                        <a id="incre" class="button" ng-click="increment(item)">+</a>
+                         <button ion-button class="btnclaim"> <ion-icon name="cart"></ion-icon></button>
+       </div>
+                    
+          </div>
+     
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+</ion-content>
